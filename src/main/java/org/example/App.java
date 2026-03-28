@@ -12,10 +12,16 @@ public class App
     public static void main( String[] args )
     {
         ApplicationContext context = new ClassPathXmlApplicationContext("spring.xml");
-        Alien obj = (Alien) context.getBean("alien1");
-        obj.code();
+        Alien obj1 = (Alien) context.getBean("alien1");
+        obj1.age = 11;
+        System.out.println(obj1.age);
+        obj1.code();
 
-        Laptop laptopObj = context.getBean(Laptop.class);
-        laptopObj.machine();
+        Alien obj2 = (Alien) context.getBean("alien1");
+        System.out.println(obj2.age);
+        obj2.code();
+
+//        Laptop laptopObj = context.getBean(Laptop.class);
+//        laptopObj.machine();
     }
 }
