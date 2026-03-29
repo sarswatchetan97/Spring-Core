@@ -3,12 +3,15 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="
         http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
-    <bean id="alien1" class="org.example.Alien" scope="prototype">
+<!--    <bean id="alien1" class="org.example.Alien" scope="prototype">-->
 
+<!--    </bean>-->
+    <bean id="alien1" class="org.example.Alien">
+        <property name="age" value="21"></property>
     </bean>
-    <bean id="laptop" class="org.example.Laptop">
+<!--    <bean id="laptop" class="org.example.Laptop">-->
 
-    </bean>
+<!--    </bean>-->
 <!--    <bean id="alien2" class="org.example.Alien">-->
 
 <!--    </bean>-->
