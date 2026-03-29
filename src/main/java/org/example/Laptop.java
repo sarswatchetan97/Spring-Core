@@ -8,4 +8,8 @@ public class Laptop {
     public void machine() {
         System.out.println("Its a machine");
     }
+
+    public void compile() {
+        System.out.println("Compiling..");
+    }
 }

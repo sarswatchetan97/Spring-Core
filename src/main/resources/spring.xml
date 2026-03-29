@@ -7,11 +7,19 @@
 
 <!--    </bean>-->
     <bean id="alien1" class="org.example.Alien">
-        <property name="age" value="21"></property>
-    </bean>
-<!--    <bean id="laptop" class="org.example.Laptop">-->
+<!--        <property name="age" value="21"></property>-->
+<!--        <constructor-arg type="int" value="21" />-->
+<!--&lt;!&ndash;        <property name="lap" ref="laptop"></property>&ndash;&gt;-->
+<!--        <constructor-arg type="org.example.Laptop" ref="laptop" />-->
+<!--        <constructor-arg index="0" value="11" />-->
+<!--        <constructor-arg index="1" ref="laptop" />-->
 
-<!--    </bean>-->
+        <constructor-arg name="age" value="12" />
+        <constructor-arg name="lap" ref="laptop"></constructor-arg>
+    </bean>
+    <bean id="laptop" class="org.example.Laptop">
+
+    </bean>
 <!--    <bean id="alien2" class="org.example.Alien">-->
 
 <!--    </bean>-->
