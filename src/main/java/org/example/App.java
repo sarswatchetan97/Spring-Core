@@ -22,5 +22,8 @@ public class App
 
 //        Laptop laptopObj = context.getBean(Laptop.class);
 //        laptopObj.machine();
+
+//        Desktop obj2 = (Desktop) context.getBean("com2");
+
     }
 }
