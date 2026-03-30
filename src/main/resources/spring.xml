@@ -8,7 +8,11 @@
 <!--    </bean>-->
     <bean id="alien1" class="org.example.Alien" autowire="byType">
         <property name="age" value="21"></property>
-        <property name="com"  ref="com2"></property>
+        <property name="com">
+            <bean id="com1" class="org.example.Laptop" primary="true">
+
+            </bean>
+        </property>
 
         <!--        <constructor-arg type="int" value="21" />-->
 <!--        <constructor-arg type="org.example.Laptop" ref="laptop" />-->
@@ -18,9 +22,9 @@
 <!--        <constructor-arg name="age" value="12" />-->
 <!--        <constructor-arg name="lap" ref="laptop"></constructor-arg>-->
     </bean>
-    <bean id="com1" class="org.example.Laptop" primary="true">
+    <!--<bean id="com1" class="org.example.Laptop" primary="true">
 
-    </bean>
+    </bean>-->
     <bean id="com2" class="org.example.Desktop" lazy-init="true">
 
     </bean>
