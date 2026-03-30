@@ -6,18 +6,22 @@
 <!--    <bean id="alien1" class="org.example.Alien" scope="prototype">-->
 
 <!--    </bean>-->
-    <bean id="alien1" class="org.example.Alien">
-<!--        <property name="age" value="21"></property>-->
-<!--        <constructor-arg type="int" value="21" />-->
-<!--&lt;!&ndash;        <property name="lap" ref="laptop"></property>&ndash;&gt;-->
+    <bean id="alien1" class="org.example.Alien" autowire="byType">
+        <property name="age" value="21"></property>
+        <property name="com"  ref="com2"></property>
+
+        <!--        <constructor-arg type="int" value="21" />-->
 <!--        <constructor-arg type="org.example.Laptop" ref="laptop" />-->
 <!--        <constructor-arg index="0" value="11" />-->
 <!--        <constructor-arg index="1" ref="laptop" />-->
 
-        <constructor-arg name="age" value="12" />
-        <constructor-arg name="lap" ref="laptop"></constructor-arg>
+<!--        <constructor-arg name="age" value="12" />-->
+<!--        <constructor-arg name="lap" ref="laptop"></constructor-arg>-->
     </bean>
-    <bean id="laptop" class="org.example.Laptop">
+    <bean id="com1" class="org.example.Laptop" primary="true">
+
+    </bean>
+    <bean id="com2" class="org.example.Desktop">
 
     </bean>
 <!--    <bean id="alien2" class="org.example.Alien">-->
