@@ -3,6 +3,7 @@ package org.example;
 import org.example.config.AppConfig;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 /**
@@ -15,11 +16,15 @@ public class App
     {
         ApplicationContext context = new AnnotationConfigApplicationContext(AppConfig.class);
 
-        Desktop desktopObj = context.getBean(Desktop.class);
-        desktopObj.compile();
+        Alien alienObj = context.getBean(Alien.class);
+        System.out.println(alienObj.getAge());
+        alienObj.code();
 
-        Desktop desktopObj1 = context.getBean( Desktop.class);
-        desktopObj1.compile();
+//        Desktop desktopObj = context.getBean(Desktop.class);
+//        desktopObj.compile();
+//
+//        Desktop desktopObj1 = context.getBean( Desktop.class);
+//        desktopObj1.compile();
 
 //        ApplicationContext context = new ClassPathXmlApplicationContext("spring.xml");
 //        Alien obj1 = context.getBean("alien1", Alien.class);
